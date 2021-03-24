@@ -24,5 +24,4 @@ public class Medic extends Hero {
             }
         }
     }
-
 }

@@ -9,7 +9,7 @@ public class Golem extends Hero {
     public void applySuperAbility(Boss boss, Hero[] heroes) {
         for (int i = 0; i < heroes.length; i++) {
             if (boss.getHealth() > 0) {
-                this.setHealth(this.getHealth() - ( boss.getDamage() / 5));
+                this.setHealth(this.getHealth() - (boss.getDamage() / 5));
                 heroes[i].setHealth(heroes[i].getHealth() + (boss.getDamage() / 5));
             }
         }

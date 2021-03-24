@@ -1,6 +1,6 @@
 package kg.geektech.les8.players;
 
-import java.util.Random;
+import kg.geektech.les8.game.RPG_Game;
 
 public class Thor extends Hero {
     public Thor(int health, int damage) {
@@ -9,8 +9,10 @@ public class Thor extends Hero {
 
     @Override
     public void applySuperAbility(Boss boss, Hero[] heroes) {
-
-
+        boss.setStunned(RPG_Game.random.nextBoolean());
+        if(boss.isStunned()){
+            System.out.println("Thor stunned Boss!");
+        }
     }
 }
 

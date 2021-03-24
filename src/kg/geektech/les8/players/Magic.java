@@ -14,8 +14,9 @@ public class Magic extends Hero {
             for (int i = 0; i < heroes.length; i++) {
                 boss.setHealth(boss.getHealth() - coefficient);
                 //heroes[i].setDamage(heroes[i].getDamage() + coefficient); у героев урон увеличивается каждый раунд
-            } System.out.println("Magic boost +" + coefficient);
+            }
+            System.out.println("Magic boost +" + coefficient);
         }
     }
-
 }
+//Magic должен увеличивать атаку каждого героя после каждого раунда на n-ное количество

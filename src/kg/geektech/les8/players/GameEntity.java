@@ -28,4 +28,5 @@ public abstract class GameEntity {
     public void setDamage(int damage) {
         this.damage = damage;
     }
+
 }

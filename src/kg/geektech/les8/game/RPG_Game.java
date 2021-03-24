@@ -17,8 +17,10 @@ public class RPG_Game {
         Medic assistant = new Medic(265, 15, 5);
         Golem golem = new Golem(500, 10);
         Thor thor = new Thor(250, 15);
+        Witcher witcher = new Witcher(300,0);
+        Bane bane = new Bane(250,10);
 
-        Hero[] heroes = {warrior, doc, magic, berserk, assistant, golem, thor};
+        Hero[] heroes = {warrior, doc, magic, berserk, assistant, golem, thor,witcher,bane};
         printStatistics(boss, heroes);
         while (!isGameFinished(boss, heroes)) {
             round(boss, heroes);
@@ -27,7 +29,7 @@ public class RPG_Game {
 
     private static void round(Boss boss, Hero[] heroes) {
         System.out.println(++roundNumber + " --- ROUND"); // pre-increment
-        if (boss.getHealth() > 0) {
+        if (boss.getHealth() > 0 && !boss.isStunned()) {
                 bossHits(boss, heroes);
         }
         heroesHit(boss, heroes);
